@@ -1,7 +1,7 @@
 /** @format */
 
 try {
-  const Server = require('./dist/server.js');
+  const Server = require('./src/server.js');
 
   //instanciate server
   const server = new Server();
