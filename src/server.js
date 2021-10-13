@@ -1,5 +1,6 @@
 /** @format */
 const express = require('express');
+const cors = require('cors');
 
 const SimpleServerModule = class SimpleServer {
   constructor() {}
@@ -8,6 +9,9 @@ const SimpleServerModule = class SimpleServer {
     const app = express();
     //serve
     app.use(express.static(config.folder)); //what folder is served
+
+    //cors enable all CORS request
+    app.use(cors());
 
     //http server
     app.listen(config.port, function (err) {
